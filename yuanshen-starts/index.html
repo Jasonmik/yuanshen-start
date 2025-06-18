@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原来你也玩原</title>
+    <link rel="stylesheet" href="css/alphabet_style.css">
+    <link rel="stylesheet" href="css/Border_animation.css">
+    <link rel="stylesheet" href="css/animation_border_p.css">
+    <link rel="stylesheet" href="css/alphabet_animation.css">
+    <link rel="stylesheet" href="css/Character_background.css">
+    <link rel="stylesheet" href="css/Entrance_animation.css">
+    <link rel="stylesheet" href="css/Interactive_animation.css">
+    
+    <!-- 启动界面样式 -->
+    <link rel="stylesheet" href="css/start_screen.css">
+</head>
+
+<body>
+    <!-- 启动界面 -->
+    <div class="start-screen" id="startScreen">
+        <div class="play-button" id="playButton">
+            <div class="play-icon"></div>
+        </div>
+    </div>
+    
+    <!-- 音频元素 -->
+    <audio id="bgm" preload="auto">
+        <source src="./voice/start_bgm.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio>
+    
+    <div class="content">
+        <div class="aniplex">
+            <div class="chars">A</div>
+            <div class="chars">N</div>
+            <div class="chars">I</div>
+            <div class="chars">P</div>
+            <div class="chars">L</div>
+            <div class="chars">E</div>
+            <div class="chars">X</div>
+            <div class="rect a"></div>
+            <div class="rect n"></div>
+            <div class="rect i"></div>
+            <div class="rect p"></div>
+            <div class="rect l"></div>
+            <div class="rect e"></div>
+            <div class="rect x"></div>
+            <div class="rect-edge"></div>
+        </div>
+
+        <ul class="cards">
+            
+            <li class="card" style="background-image: url('./img/刻晴.jpg');">
+                <div class="more" style="background-image: url('./img/璃月.jpg');">
+                    <div class="paint" style="background-image: url('./img/刻晴big.png');"></div>
+                    <img src="./img/text-刻晴.png" alt="" class="title">
+                    <div class="bar">
+                        <img src="./img/point2.jpg" alt="" class="point">
+                        <span class="text">CV:谢莹</span>
+                        <img src="./img/语音.png" alt="" class="voice" id="voice1">
+                    </div>
+                    <div class="jianjie">
+                        <p>璃月七星之一，人称「刻晴」，擅长使用五百年前的古剑。性格坚毅，对信念坚定不移，对朋友忠诚可靠。<br>
+                            她一直致力于守护璃月，并寻找能重振璃月繁荣的方法。</p>
+                        <img src="./img/point.png" alt="" class="point">
+                    </div>
+                </div>
+            </li>
+
+            <li class="card" style="background-image: url(./img/宵宫.jpg);">
+                <div class="more" style="background-image: url('./img/稻妻.jpg');">
+                    <div class="paint" style="background-image: url('./img/宵宫big.png');"></div>
+                    <img src="./img/text-宵宫.png" alt="" class="title">
+                    <div class="bar">
+                        <img src="./img/point2.jpg" alt="" class="point">
+                        <span class="text">CV:金娜</span>
+                        <img src="./img/语音.png" alt="" class="voice" id="voice2">
+                    </div>
+                    <div class="jianjie">
+                        <p>才华横溢的烟花工匠，「长野原烟花店」的现任店主，被判认为「夏祭的女王」。<br>
+                            热情似火的少女。未泯的童心与匠人的执着在他身上交织出了奇妙的焰色反应。</p>
+                        <img src="./img/point.png" alt="" class="point">
+                    </div>
+                </div>
+            </li>
+
+            <li class="card" style="background-image: url(./img/神子.jpg);">
+                <div class="more" style="background-image: url('./img/稻妻.jpg');">
+                    <div class="paint" style="background-image: url('./img/神子big.png');"></div>
+                    <img src="./img/text-神子.png" alt="" class="title">
+                    <div class="bar">
+                        <img src="./img/point2.jpg" alt="" class="point">
+                        <span class="text">CV:杜冥鸦</span>
+                        <img src="./img/语音.png" alt="" class="voice" id="voice3">
+                    </div>
+                    <div class="jianjie">
+                        <p>掌管鸣神大社的大巫女、狐之血脉的延续者、「永恒」的眷属与友人，以及，轻小说出版社「八重堂」的恐怖总编…<br>
+                            有着多重身份的神秘宫司，凡人们或许永远无法了解她的真面目与真心。</p>
+                        <img src="./img/point.png" alt="" class="point">
+                    </div>
+                </div>
+            </li>
+
+            <li class="card" style="background-image: url(./img/胡桃.jpg);">
+                <div class="more" style="background-image: url('./img/璃月.jpg');">
+                    <div class="paint" style="background-image: url('./img/胡桃big.png');"></div>
+                    <img src="./img/text-胡桃.png" alt="" class="title">
+                    <div class="bar">
+                        <img src="./img/point2.jpg" alt="" class="point">
+                        <span class="text">CV:陶典</span>
+                        <img src="./img/语音.png" alt="" class="voice" id="voice4">
+                    </div>
+                    <div class="jianjie">
+                        <p>胡桃——「往生堂」第七十七代堂主，掌控着璃月葬仪事务的重要人物。<br>
+                            尽心尽力地为人们完成送别之仪，维护着世间阴阳平衡之道。<br>
+                            除此以外还是个神奇打油诗人，诸多「杰作」被璃月人口口相传。
+                        </p>
+                        <img src="./img/point.png" alt="" class="point">
+                    </div>
+                </div>
+            </li>
+
+            <li class="card" style="background-image: url(./img/妮露.jpg);">
+                <div class="more" style="background-image: url('./img/须弥.jpg');">
+                    <div class="paint" style="background-image: url('./img/妮露big.png');"></div>
+                    <img src="./img/text-妮露.png" alt="" class="title">
+                    <div class="bar">
+                        <img src="./img/point2.jpg" alt="" class="point">
+                        <span class="text">CV:紫苏九月</span>
+                        <img src="./img/语音.png" alt="" class="voice" id="voice5">
+                    </div>
+                    <div class="jianjie">
+                        <p>「祖拜尔剧场」的明星演员，舞姿娉婷，如睡莲初绽，一尘不染。<br>
+                            但绝非高傲清冷之人，即便只是匆匆的旅者，也会对她纯洁质朴的笑容过目不忘。</p>
+                        <img src="./img/point.png" alt="" class="point">
+                    </div>
+                </div>
+            </li>
+
+            <li class="card" style="background-image: url(./img/心海.jpg);">
+                <div class="more" style="background-image: url('./img/稻妻.jpg');">
+                    <div class="paint" style="background-image: url('./img/心海big.png');"></div>
+                    <img src="./img/text-心海.png" alt="" class="title">
+                    <div class="bar">
+                        <img src="./img/point2.jpg" alt="" class="point">
+                        <span class="text">CV:龟娘</span>
+                        <img src="./img/语音.png" alt="" class="voice" id="voice6">
+                    </div>
+                    <div class="jianjie">
+                        <p>心海是海祇岛的「现人神巫女」，也就是现任海祇岛最高领袖。<br>
+                            她通读兵法、擅长谋略，在军事上有着独特见解，也能将内政、外交等工作处理得井井有条。<br>
+                            不过，这位人们眼中深不可测的领导者，似乎也有不为人知的一面…
+                        </p>
+                        <img src="./img/point.png" alt="" class="point">
+                    </div>
+                </div>
+            </li>
+
+            <li class="card" style="background-image: url(./img/凌华.jpg);">
+                <div class="more" style="background-image: url('./img/稻妻.jpg');">
+                    <div class="paint" style="background-image: url('./img/凌华big.png');"></div>
+                    <img src="./img/text-凌华.png" alt="" class="title">
+                    <div class="bar">
+                        <img src="./img/point2.jpg" alt="" class="point">
+                        <span class="text">CV:小N</span>
+                        <img src="./img/语音.png" alt="" class="voice" id="voice7">
+                    </div>
+                    <div class="jianjie">
+                        <p>稻妻「社奉行」神里家的大小姐。端庄文雅，聪慧坚韧。<br>
+                            待人接物真诚又得体，深受稻妻民众爱戴，贵有「白鹭公主」之名。</p>
+                        <img src="./img/point.png" alt="" class="point">
+                    </div>
+                </div>
+            </li>
+            
+            <li class="card" style="background-image: url(./img/雷神.jpg);">
+                <div class="more" style="background-image: url('./img/稻妻.jpg');">
+                    <div class="paint" style="background-image: url('./img/雷神big.png');"></div>
+                    <img src="./img/text-将军.png" alt="" class="title">
+                    <div class="bar">
+                        <img src="./img/point2.jpg" alt="" class="point">
+                        <span class="text">CV:菊花花</span>
+                        <img src="./img/语音.png" alt="" class="voice" id="voice8">
+                    </div>
+                    <div class="jianjie">
+                        <p>雷电将军——此世最殊胜威怖的雷霆化身，稻妻幕府的最高主宰。<br>
+                            挟威权之鸣雷，逐永恒之孤道的寂灭者。</p>
+                        <img src="./img/point.png" alt="" class="point">
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <audio id="bgm1" >
+        <source src="./voice/刻晴.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+
+    <audio id="bgm2" >
+        <source src="./voice/宵宫语音.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+
+    <audio id="bgm3" >
+        <source src="./voice/八重神子语音.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+
+    <audio id="bgm4" >
+        <source src="./voice/胡桃语音.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+
+    <audio id="bgm5" >
+        <source src="./voice/妮露语音.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+
+    <audio id="bgm6" >
+        <source src="./voice/心海介绍.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+
+    <audio id="bgm7" >
+        <source src="./voice/神里绫华语音.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+
+    <audio id="bgm8" >
+        <source src="./voice/雷神语音.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+
+    <audio id="background_Bgm" loop>
+        <source src="./voice/background_bgm.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const startScreen = document.getElementById('startScreen');
+        const playButton = document.getElementById('playButton');
+        const mainContent = document.getElementById('mainContent');
+        const bgm = document.getElementById('bgm');
+        const backgroundBgm = document.getElementById('backgroundBgm'); // 新添加
+        
+        // 点击播放按钮事件
+        playButton.addEventListener('click', function() {
+            // 开始播放音乐
+            bgm.play().then(function() {
+                console.log('音乐开始播放');
+            }).catch(function(error) {
+                console.log('音乐播放失败:', error);
+            });
+            
+            // 隐藏启动界面
+            startScreen.classList.add('hidden');
+            
+            // 显示主要内容
+            setTimeout(function() {
+                mainContent.classList.add('visible');
+            }, 250); // 延迟一点让过渡更自然
+            
+            // 完全移除启动界面（可选）
+            setTimeout(function() {
+                startScreen.style.display = 'none';
+            }, 500);
+
+            // 播放背景音乐
+            backgroundBgm.play();
+        });
+        
+
+        const image1 = document.getElementById('voice1'); 
+        const audio1 = document.getElementById('bgm1');
+
+        const image2 = document.getElementById('voice2'); 
+        const audio2 = document.getElementById('bgm2');
+
+        const image3 = document.getElementById('voice3'); 
+        const audio3 = document.getElementById('bgm3');
+
+        const image4 = document.getElementById('voice4'); 
+        const audio4 = document.getElementById('bgm4');
+
+        const image5 = document.getElementById('voice5'); 
+        const audio5 = document.getElementById('bgm5');
+
+        const image6 = document.getElementById('voice6'); 
+        const audio6 = document.getElementById('bgm6');
+
+        const image7 = document.getElementById('voice7'); 
+        const audio7 = document.getElementById('bgm7');
+
+        const image8 = document.getElementById('voice8'); 
+        const audio8 = document.getElementById('bgm8');
+        
+        //图片点击事件
+        image1.addEventListener('click', function() {
+            if (audio1.paused) {
+                // 播放音频并切换图片
+                audio1.play();
+                image1.src = "./img/sound.png";
+            } else {
+                // 暂停音频并恢复图片
+                audio1.pause();
+                image1.src = "./img/语音.png"; 
+            }
+        });
+
+        image2.addEventListener('click', function() {
+            if (audio2.paused) {
+                // 播放音频并切换图片
+                audio2.play();
+                image2.src = "./img/sound.png";
+            }
+            else {
+                // 暂停音频并恢复图片
+                audio2.pause();
+                image2.src = "./img/语音.png"; 
+            }
+        });
+
+        image3.addEventListener('click', function() {
+            if (audio3.paused) {
+                // 播放音频并切换图片
+                audio3.play();
+                image3.src = "./img/sound.png";
+            } else {
+                // 暂停音频并恢复图片
+                audio3.pause();
+                image3.src = "./img/语音.png";
+            }
+        });
+
+        image4.addEventListener('click', function() {
+            if (audio4.paused) {
+                // 播放音频并切换图片
+                audio4.play();
+                image4.src = "./img/sound.png";
+            } else {
+                // 暂停音频并恢复图片
+                audio4.pause();
+                image4.src = "./img/语音.png";
+            }
+        });
+
+        image5.addEventListener('click', function() {
+            if (audio5.paused) {
+                // 播放音频并切换图片
+                audio5.play();
+                image5.src = "./img/sound.png";
+            } else {
+                // 暂停音频并恢复图片
+                audio5.pause();
+                image5.src = "./img/语音.png";
+            }
+        });
+
+        image6.addEventListener('click', function() {
+            if (audio6.paused) {
+                // 播放音频并切换图片
+                audio6.play();
+                image6.src = "./img/sound.png";
+            } else {
+                // 暂停音频并恢复图片
+                audio6.pause();
+                image6.src = "./img/语音.png";
+            }
+        });
+
+        image7.addEventListener('click', function() {
+            if (audio7.paused) {
+                // 播放音频并切换图片
+                audio7.play();
+                image7.src = "./img/sound.png";
+            } else {
+                // 暂停音频并恢复图片
+                audio7.pause();
+                image7.src = "./img/语音.png";
+            }
+        });
+
+        image8.addEventListener('click', function() {
+            if (audio8.paused) {
+                // 播放音频并切换图片
+                audio8.play();
+                image8.src = "./img/sound.png";
+            } else {
+                // 暂停音频并恢复图片
+                audio8.pause();
+                image8.src = "./img/语音.png";
+            }
+        });
+    });
+
+
+</script>
+    
+
+</body>
+</html>
