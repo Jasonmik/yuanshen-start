@@ -1,4 +1,2 @@
-
-#main
 # yuanshen-start
 
